@@ -6,6 +6,9 @@ class Header extends Component{
         return(
             <div>
                 {/* <h1>Plantillos Tipicos</h1> */}
+                {
+                    //<h1>Plantillos Tipicos</h1>
+                }
             </div>
         )
     }
