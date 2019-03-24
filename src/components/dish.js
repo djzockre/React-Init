@@ -1,14 +1,14 @@
 import React,{Component, Fragment}  from 'react';
-
-
+// import { MDBBtn } from "mdbreact";
+import { MDBBtn, MDBIcon, MDBBtnFixed, MDBBtnFixedItem } from "mdbreact";
 export class Ingrediente extends Component {
 
     render(){
         // return React.createElement('h4', {},"INGREDIENTE");
         return (
             <Fragment>
-                <h1>Ingredientes</h1>
-                <h1>Ingredientes</h1>
+                <h4>Ingredientes</h4>
+                <h4>Ingredientes</h4>
             </Fragment>
         )
     }
@@ -32,10 +32,19 @@ export class Flag extends Component {
 
 class Dish extends Component {
 
+    ingredientes = ["Tortilla", "Carne", "Cebolla"];
+
+    contarIngredientes(){
+        return this.ingredientes.length;
+    }
+    
     render(){
         return(
-            <div>
-                <h1>Plantillo</h1>
+            <div className="dish" >
+                <h1>{this.props.name}</h1>
+                <h1>{this.contarIngredientes()}</h1>
+                <MDBBtn color="primary" >Platillo A</MDBBtn>
+    
             </div>
         )
     }
